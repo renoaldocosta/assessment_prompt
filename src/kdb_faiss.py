@@ -40,7 +40,7 @@ class KDBFaiss(object):
     # Processar o embeddings do texto e adicionar ao indice
     def add_text(self, texts):
         if isinstance(texts, str):
-            texts [texts]
+            texts = [texts]
 
         self.texts = texts
         embeddings = self.embedding_model.encode(texts) #.astype("float16")
@@ -87,7 +87,7 @@ class KDBFaiss(object):
                 results.append(self.texts[indices[0][i]])
         
                 
-        return results
+        return np.unique(results)
 
 # END OF FILE
 

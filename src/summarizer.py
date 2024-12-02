@@ -2,6 +2,10 @@
 
 from tools import Gemini
 
+
+################################################################### CHUNK SUMMARY
+
+
 class ChunkSummary():
     def __init__(self, model_name, apikey, text, window_size,
                  overlap_size, system_prompt, generation_config=None):
@@ -74,5 +78,55 @@ class ChunkSummary():
         
         return response
         
+
+
+################################################################### CHUNK MNLI
+
+from transformers import pipeline
+
+# Funcao para classificacao por NLI
+def nli_classification(sequence_to_classify, security_labels):
+    classifier = pipeline(
+        "zero-shot-classification",
+        model="facebook/bart-large-mnli",
+        device='cpu'
+    )
+
+    label_dict = classifier(sequence_to_classify, security_labels)
+    # label_dict.pop('sequence')
+    return label_dict
+
+
+
+
+class ChunkMNLI():
+    def __init__(self, text, window_size, overlap_size):
+        self.text = text
+        if isinstance(self.text, str):
+            self.text = [self.text]
+        self.window_size = window_size
+        self.overlap_size = overlap_size
+        # Aplicacao dos chunks e criacao do modelo
+        self.chunks = self.__text_to_chunks()
+
+     
+    
+    def __text_to_chunks(self):       
+        n = self.window_size  # Tamanho de cada chunk
+        m = self.overlap_size  # overlap entre chunks
+        return [self.text[i:i+n] for i in range(0, len(self.text), n-m)]
+
+
+    def classify(self, labels):
+
+        chunk_results = []
+        for i,chunk in enumerate(model.chunks):
+            print(f"Chunk #{i+1}")
+            Y = nli_classification('\n\n'.join(chunk), labels)
+            chunk_results.append({l:s for l, s in zip(Y['labels'], Y['scores'])})
+
+        return chunk_results
+
+
 
 

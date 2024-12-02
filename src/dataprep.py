@@ -20,9 +20,9 @@ CHARACTERS = CHARACTERS.split(',')
 
 EXECUTE_SUMMARIZATION_EPISODE = os.environ.get('EXECUTE_SUMMARIZATION_EPISODE', False)
 EXECUTE_SUMMARIZATION_SEASON = os.environ.get('EXECUTE_SUMMARIZATION_SEASON', False)
-EXECUTE_SUMMARIZATION_CHARACTER = os.environ.get('EXECUTE_SUMMARIZATION_CHARACTER', True)
+EXECUTE_SUMMARIZATION_CHARACTER = os.environ.get('EXECUTE_SUMMARIZATION_CHARACTER', False)
 EXECUTE_EPISODES_MNLI = os.environ.get('EXECUTE_EPISODES_MNLI', False)
-EXECUTE_FAISS_KDB = os.environ.get('EXECUTE_FAISS_KDB', False)
+EXECUTE_FAISS_KDB = os.environ.get('EXECUTE_FAISS_KDB', True)
 
 
 #########################################################
@@ -219,7 +219,9 @@ else:
 #########################################################
 ## TAREFA 4
 ## Classificação de sentimento das falas:
-## Criar IA que classifica as falas dos personagens como positivas, negativas ou neutras. 
+## Criar IA que classifica os episodios de acordo com labels MNLI. 
+
+
 
 
 
@@ -228,6 +230,8 @@ else:
 ## Classificador de Faixa Etária com BART-MNLI:
 ## Utilizar técnica LLM de NLI para estimar a faixa etária dos episódios da série.
 ## Comparar os termos NLI com os ratings e audiência dos episódios.
+
+# Definir conjunto de labels para o llm classificar (MNLI)
 
 security_labels = [
     'alcohol',
@@ -262,6 +266,7 @@ if EXECUTE_EPISODES_MNLI:
         label_dict = classifier(sequence_to_classify, security_labels)
         label_dict.pop('sequence')
         return label_dict
+    
 
     # Iteracao sobre os episodios a serem analisados
     espisode_labels = {}
@@ -269,13 +274,16 @@ if EXECUTE_EPISODES_MNLI:
         print('EPISODE', episode_id)
         # Extracao das labels das linhas
         X = data[(data.episode_id == episode_id)].sort_values('number')
-        X = X.dropna(subset='normalized_text')
+        X = X.dropna(subset='normalized_text').sample(10)
         X['nli_labels'] = X.normalized_text.apply(lambda x: nli_classification(x))
-        Y = pd.json_normalize(X.nli_labels)
+        # Y = pd.json_normalize(X.nli_labels)
         Y = pd.DataFrame().from_records(X.nli_labels.tolist())
         scores = []
         for L,S in zip(Y['labels'], Y['scores']) :
             scores.append({l:s for l, s in zip(L,S)})
+
+        # {l:s for l, s in zip(Y['labels'], Y['scores'])}
+
 
         df_labels = pd.DataFrame().from_records(scores)
         df_labels.index = X.index
@@ -284,10 +292,9 @@ if EXECUTE_EPISODES_MNLI:
         espisode_labels[episode_id] = X[['episode_id','number',] + security_labels]
 
     # Exportacao
-    joblib.dump(character_summaries, '../data/security/espode_lines_nli.joblib', compress=9)
+    joblib.dump(espisode_labels, '../data/security/episodes_lines_nli-2.joblib', compress=9)
 else:
-    character_summaries = joblib.load('../data/security/espode_lines_nli.joblib')
-
+    espisode_labels = joblib.load('../data/security/episodes_lines_nli-2.joblib')
 
 
 
@@ -310,11 +317,11 @@ if EXECUTE_FAISS_KDB:
             cache_folder= '../data/llms',
             device = 'cpu',
         )
-           # Processar o embeddings do texto e adicionar ao indice
+        # Processar o embeddings do texto e adicionar ao indice
         db.add_text(X.tolist())
 
         # Exportacao dos indices do KDB
-        db.export_kdb(f"../data/faiss/kdb_episode_id_{episode_id}.faiss")
+        db.export_kdb(f"../data/faiss/backup-kdb_episode_id_{episode_id}.faiss")
 
 
 

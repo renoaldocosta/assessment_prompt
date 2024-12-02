@@ -232,145 +232,97 @@ def tab_ads(mytab):
 
 ############################################################## EPISODE Q&A
 
+import joblib
+@st.cache_data
+def load_faiss(filename):
+    return joblib.load(filename)
 
-def tab_episode_qa(mytab):
+
+
+def tab_qa(mytab):
     with mytab:
-        
-
         st.title("Episode Q&A")
-
-
-        # Usuario pode selecionar o episodio
+        # Usuario pode selecionar o episodio (select box)
         # Mostrar a sumarizacao do episodio.
         # Configurar Agente de QA
         # Interacao do usuario
 
-        # import streamlit as st
-        # from langchain import LLMChain, OpenAI
-        # from langchain.agents import AgentExecutor, Tool, ConversationalAgent
-        # from langchain.memory import ConversationBufferMemory
-        # from langchain_community.llms import OpenAI
-        # # from langchain.utilities import OpenWeatherMapAPIWrapper
-        # # from langchain.utilities import GoogleSerperAPIWrapper
-        # from langchain_community.chat_models import ChatOpenAI
-        # from langchain.memory.chat_message_histories import StreamlitChatMessageHistory
+        selected_episode = st.selectbox(
+            "Select QA episode",
+            options=st.session_state['FAISS_DB'].keys(),
+            index=None
+        )
+        if selected_episode is None:
+            st.write('No episode selected')
+            return
+        # Print do sumario do episodio
+        st.markdown('# Episode Summary')
+        st.write(st.session_state['episode_summary'][selected_episode])
 
-        # import tools
+        # Carga da base FAISS
+        kdb = load_faiss(st.session_state['FAISS_DB'][selected_episode])
+        # Criacao do Agente
+        system_prompt = f"""
+        You are going to be a QA assistant specializing in The Simpsons. You will be given 
+        a set of lines of dialogue from a specific Simpsons episode. Your task is to answer 
+        user questions about that episode using only the provided dialogue. If a question 
+        cannot be answered definitively from the given dialogue, politely state that you don't
+        have enough information to answer and suggest that the user might need to watch the 
+        episode to find the answer.
+        Your responses should always be friendly and polite. Use phrases like:
 
+        "That's a great question! Based on the dialogue I have..."
 
-        # st.title("Character Overview")
+        "Hmm, that's interesting. Unfortunately, the provided lines don't give me enough information to answer that."
 
+        "Let me see what I can find... based on these lines, I believe..."
 
-        # AI = OpenAI(temperature=0.7)
+        "I'm sorry, but I don't see anything about that in the provided script excerpt."
 
-        # # the simpson tool
-        # if st.session_state.get('FAISS_DB') is None:
-        #     st.warning('Could not find objecto FAISS DB')
-        #     return
+        Example:
 
-        # # Criacao das tools que vao auxiliar no prompt do agente
-        # # Colocar os tools de busca em cada episodio.
-        # simpsons_episode_tools = []
-        # for k,v in st.session_state['FAISS_DB'].items():
-        #     simpsons_episode_tools.append(
-        #         tools.KDBFaissTool(
-        #             v,
-        #             f'episode {k} assistant',
-        #             f"""AI Assistant for understanding, questioning and explaining the
-        #             story in episode {k} of the 'The Simpsons show'.
-        #             """
-        #         )
-        #     )
+        Input:
 
+        Homer: D'oh!  My donuts!
+        Marge: Homer, you ate all the donuts again!
+        Bart:  Eat my shorts!
+        Lisa:  That's not very nice, Bart.
+        """
+        qa_model = tools.Gemini(
+            apikey=os.environ["GEMINI_KEY"],
+            model_name="gemini-1.5-flash",
+            system_prompt=system_prompt,
+            # generation_config=generation_config
+        )
 
-        # # # search tool
-        # # search = GoogleSerperAPIWrapper(serper_api_key=SERPER_API_KEY)
-        # # # weather tool
-        # # weather = OpenWeatherMapAPIWrapper(
-        # #     openweathermap_api_key=OPENWEATHERMAP_API_KEY
-        # # )
+        # Display chat messages from history on app rerun
+        for message in qa_model.history:
+            with st.chat_message(message["role"]):
+                st.markdown(message["parts"][0])
 
-        # tools = []
-        # tools.extend(simpsons_episode_tools)
-        # # tools = [
-        # #     Tool(
-        # #         name="Search",
-        # #         func=search.run,
-        # #         description="Useful for when you need to get current, up to date answers.",
-        # #     ),
-        # #     Tool(
-        # #         name="Weather",
-        # #         func=weather.run,
-        # #         description="Useful for when you need to get the current weather in a location.",
-        # #     ),
-        # # ]
+        # React to user input
+        prompt = st.chat_input("Hi")
+        if prompt is not None:
+            # Display user message in chat message container
+            st.chat_message("user").markdown(prompt)
+            # RAG para a base de conhecimento
+            refs = kdb.search(prompt, k=40, index_type = 'both')
+            refs = '\n'.join([f'- {x}' for x in refs])
+            prompt = f"""
+            Respond to the user question in "QUESTION" with the information listed in "RAG":
+            "QUESTION"
+            {prompt}
+            
+            "RAG"
+            {refs}
+            """
 
+            # st.write(prompt)
 
-        # prefix = """
-        # You are an actor who will play the character "{selected_character}" from "The Simpsons" show
-        # assistant for the "The Simpsons" show. You help users understand what happened in the series and
-        # details of specific episodes. You will 
-        # You are a friendly, modern day planner. You help users find activities in a given city based on their preferences and the weather.
-        #             You have access to to two tools:"""
-        # suffix = """Begin!"
-        # Chat History:
-        # {chat_history}
-        # Latest Question: {input}
-        # {agent_scratchpad}"""
-
-        # prompt = ConversationalAgent.create_prompt(
-        #     tools,
-        #     prefix=prefix,
-        #     suffix=suffix,
-        #     input_variables=["input", "chat_history", "agent_scratchpad"],
-        # )
-
-        # msgs = StreamlitChatMessageHistory()
-
-        # if "memory" not in st.session_state:
-        #     st.session_state.memory = ConversationBufferMemory(
-        #         messages=msgs, memory_key="chat_history", return_messages=True
-        #     )
-
-        # memory = st.session_state.memory
-
-        # llm_chain = LLMChain(
-        #     llm=ChatOpenAI(temperature=0.8, model_name="gpt-4"),
-        #     prompt=prompt,
-        #     verbose=True,
-        # )
-
-        # agent = ConversationalAgent(
-        #     llm_chain=llm_chain,
-        #     tools=tools,
-        #     verbose=True,
-        #     memory=memory,
-        #     max_iterations=3,
-        # )
-
-
-        # agent_chain = AgentExecutor.from_agent_and_tools(
-        #     agent=agent, tools=tools, verbose=True, memory=memory
-        # )
-
-
-        # query = st.text_input(
-        #     "What are you in the mood for?",
-        #     placeholder="I can help!",
-        # )
-
-        # if query:
-        #     with st.spinner("Thinking...."):
-        #         res = agent_chain.run(query)
-        #         st.info(res, icon="🤖")
-
-
-        # with st.expander("My thinking"):
-        #     st.write(st.session_state.memory.chat_memory.messages)
-
-
-
-
+            response = qa_model.chat(prompt)
+            # Display assistant response in chat message container
+            with st.chat_message("assistant"):
+                st.markdown(response)
 
 # END OF FILE
 

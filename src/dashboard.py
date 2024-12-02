@@ -79,10 +79,13 @@ st.sidebar.metric("Total Characters", data['character_id'].nunique())
  ads_tab,
  qa_tab) = st.tabs(("Overview", "Seasons", "Characters", "Ads", "Episode Q&A"))
 
-tabs.tab_overview(overview_tab)
+# tabs.tab_overview(overview_tab)
 
-tabs.tab_season(season_tab)
+# tabs.tab_season(season_tab)
 
-tabs.tab_character(character_tab)
+# tabs.tab_character(character_tab)
 
-tabs.tab_ads(ads_tab)
+# tabs.tab_ads(ads_tab)
+
+tabs.tab_qa(qa_tab)
+
