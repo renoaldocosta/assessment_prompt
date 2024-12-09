@@ -1,13 +1,22 @@
-import requests
-import pandas as pd
-import numpy as np
+# Importações padrão
 import json
 import os
-import google.generativeai as genai
-from dotenv import load_dotenv
+import time
 import yaml
-from tqdm import tqdm
+
+# Importações de bibliotecas de terceiros
+from dotenv import load_dotenv
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
+from openai import OpenAI
+from sentence_transformers import SentenceTransformer
+from tqdm import tqdm
+
+import faiss
+import google.generativeai as genai
+import numpy as np
+import pandas as pd
+import requests
+import streamlit as st
 
 
 
@@ -552,3 +561,198 @@ def summarizer_chunk(df_proposicoes):
         json.dump(propsition_summary, f)
     
     return summarizer.chunks, summarizer.chunk_summaries, propsition_summary
+
+
+# 8 - Adicione ao código da aba Proposições uma interface para chat com um assistente virtual especialista em câmara dos deputados. As informações coletadas dos deputados, despesas e proposições (e suas sumarizações) devem ser vetorizadas usando o modelo "neuralmind/bert-base-portuguese-cased" para armazenamento na base vetorial FAISS. O prompt do sistema para o assistente virtual deve ser feito com a técnica Self-Ask:
+######## ==============================================================
+## Questão 8 - Adicione ao código da aba Proposições uma interface para chat com um assistente virtual
+## especialista em câmara dos deputados. As informações coletadas dos deputados, despesas e proposições (e suas sumarizações)
+## devem ser vetorizadas usando o modelo "neuralmind/bert-base-portuguese-cased" para armazenamento na base vetorial FAISS.
+## O prompt do sistema para o assistente virtual deve ser feito com a técnica Self-Ask:
+##
+##
+
+@st.cache_data() #allow_output_mutation=True
+def load_and_process_data(parquet_path, model_name, llm_model_dir):
+    # Carrega os dados
+    df_informations = pd.read_parquet(parquet_path)
+    df_information = df_informations.dropna()
+
+    # Lista de textos
+    texts = df_information.information.tolist()
+
+    # Carrega o modelo de embeddings
+    embedding_model = SentenceTransformer(
+        model_name,
+        cache_folder=llm_model_dir,
+        device="cpu"
+    )
+    # Converte os textos para embeddings
+    embeddings = embedding_model.encode(texts)
+    embeddings = np.array(embeddings).astype("float32")
+
+    # Cria o índice FAISS
+    d = embeddings.shape[1]  # Dimensão dos embeddings
+    index = faiss.IndexFlatIP(d)  # Métrica Inner Product (ou L2 com IndexFlatL2)
+    index.add(embeddings)  # Adiciona os embeddings ao índice
+
+    return texts, index, embedding_model
+
+
+def search_query(query, texts, embedding_model, index, k, candidate_count):
+    # query = "Qual é o partido político com mais deputados na câmara?"
+    # query = 'Qual é o tipo de despesa mais declarada pelos deputados da câmara?'
+    # query = "Quais são as informações mais relevantes sobre as proposições que falam de 'Ciência, Tecnologia e Inovação'?"
+    query = query
+    query_embedding = embedding_model.encode([query]).astype("float32")
+    # Fazer a busca
+    # k = 20  # número de resultados mais próximos
+    distances, indices = index.search(query_embedding, k)
+    # Mostrar os resultados
+
+    db_text = '\n'.join([f"- {texts[indices[0][i]]}" for i in range(k)])
+
+    # Adicionar as respostas ao prompt para pedir ao LLM que responda
+    # If the information needed to respond is not in <database>, respond 'I do not know'.
+
+    prompt = f"""
+    Respond to the <user question> considering the information retrieved from the <database>.
+    Read several lines to try to understand how to respond it. 
+
+
+    ##
+    <user question>
+    {query}
+
+    ##
+    <database>
+    {db_text}
+
+    ##
+    The response must be formatted as a JSON with the field 'response'.
+    """
+
+    # Definir a chave de API do Gemini (use a chave fornecida pela sua conta)
+    safety_settings={
+        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+    }
+    generation_config = {
+        'temperature': 0.1,
+        # 'top_p': 0.8,
+        # 'top_k': 20,
+        'max_output_tokens': 150,
+        # 'candidate_count': 8 # nao funciona em Gemini Flash
+    }
+    genai.configure(api_key=os.environ["GEMINI_KEY"])
+    model = genai.GenerativeModel(
+        "gemini-1.5-flash",
+        safety_settings=safety_settings,
+        generation_config=generation_config,
+    )
+    # candidate_count = 5
+    candidate_count = candidate_count
+    # response = model.generate_content(prompt)
+    responses = [model.generate_content(prompt) for i in range(candidate_count)]
+    responses = [r.text.replace("```json\n",'').replace("\n```",'') for r in responses]
+    responses = [json.loads(r)['response'] for r in responses]
+    return responses
+
+
+
+
+
+# OPENAI_KEY é uma chave que deve ser colocada no aquivo .env na raiz do notebook
+
+def self_ask_step_by_step(client, model_name, hypothesis, texts, index, embedding_model, k, candidate_count):
+    print('Gerando as perguntas')
+    # Passo 1: Iniciar a pergunta principal
+    prompt_inicial = f"""
+    You task it to divide the following hypothesis in other three small, objective, questions but on the same meaning.
+    The objective its obtain informations that can be used to answer the hypothesis.
+    # hypothesis:
+    '{hypothesis}'
+
+    Generate a JSON with the list of question, just with the questions, like:
+    ['question', 'question', 'question]
+    """ 
+    prompt_inicial = prompt_inicial.replace('\n', ' ')
+    questions = client.completions.create(
+        model=model_name,
+        prompt=prompt_inicial,
+        max_tokens = 200
+    ).choices[0].text.strip().split('\n')
+
+    # Passo 2: Responder cada etapa individualmente
+    question_answers = []
+    responses = []
+    for q in questions:
+        tempo = 7
+        print(f'Esperando {tempo} segundos para a próxima pergunta')
+        time.sleep(tempo)
+        print(f'Gerando resposta para a pergunta: {q}')
+        prompt= f"Responde objectively to the following question: {q}"
+        # response = client.completions.create(
+        #     model=model_name,
+        #     prompt=prompt,
+        #     max_tokens = 500
+        # ).choices[0].text.strip()
+        print('Pesquisando respostas no banco de dados')
+        try:                      
+            response = search_query(q, texts, embedding_model, index, k, candidate_count)
+        except Exception as e:
+            print(f'################# Erro ao pesquisar respostas no banco de dados {e}')
+            response = ["Nenhuma resposta encontrada."]
+        
+        # Filtrar respostas únicas preservando a ordem
+        unique_responses = list(dict.fromkeys(response))
+        try:
+            if unique_responses:
+                # Concatenar respostas separadas por quebras de linha
+                response = "\n".join(unique_responses)
+            else:
+                response = "Nenhuma resposta encontrada."
+        except Exception as e:
+            print(f'################# Erro ao Juntar Respostas {e}')
+            response = ["Nenhuma resposta encontrada."]
+        
+        # dicionario_pergunta_resposta = {
+        #     'question': q,
+        #     'response': response
+        # }
+        question_answers.append(f"Question: {q} \nResponse: {response}")
+        responses.append(response)
+    
+    return questions, question_answers, responses
+
+
+def return_questions_from_one_question(question, texts, index, embedding_model, k, candidate_count):
+    print('Iniciando a busca de perguntas')
+    load_dotenv('../.env')
+    client = OpenAI(
+        api_key=os.environ['OPENAI_KEY']
+    )
+    model_name = "gpt-3.5-turbo-instruct"
+    # question = "How can I resume Star Wars?"
+    questions, question_answers, responses = self_ask_step_by_step(client, model_name, question, texts, index, embedding_model, k, candidate_count)
+    
+    prompt = f"""
+    Just Respond to "{question}" considering the given follow-up Question:
+    { ' '.join(questions) }
+
+    To suporte you, here are the Responses obtained from the database for each Question:
+    {' '.join(question_answers)}
+    
+    """
+    genai.configure(api_key=os.environ["GEMINI_KEY"])
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    print('Gerando a resposta final')
+    response = model.generate_content(prompt)
+    print('Traduzindo a resposta final')
+    # prompt = f"Traduza essa frase para o português-BR: '{response.text}'. Apenas traduza, explicação"
+    prompt = f"Translate this phrases to portuguese_BR: '{response.text}'. \nNo need to explain anything, just translate it."
+    traducao = model.generate_content(prompt)
+    print('Resposta final gerada')    
+    return questions, question_answers, response.text, responses, traducao.text
