@@ -1,0 +1,153 @@
+[
+    {
+        "Name": "Analysis of Expense Categories by Value",
+        "Findings": {
+            "top_net_expenses": {
+                "valorLiquido": {
+                    "DIVULGA\u00c7\u00c3O DA ATIVIDADE PARLAMENTAR.": 3772057.82,
+                    "PASSAGEM A\u00c9REA - SIGEPA": 2363759.24,
+                    "COMBUST\u00cdVEIS E LUBRIFICANTES.": 1820193.36,
+                    "MANUTEN\u00c7\u00c3O DE ESCRIT\u00d3RIO DE APOIO \u00c0 ATIVIDADE PARLAMENTAR": 1806882.54,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE VE\u00cdCULOS AUTOMOTORES": 1706765.17
+                },
+                "valorDocumento": {
+                    "DIVULGA\u00c7\u00c3O DA ATIVIDADE PARLAMENTAR.": 3772817.82,
+                    "PASSAGEM A\u00c9REA - SIGEPA": 2363759.24,
+                    "COMBUST\u00cdVEIS E LUBRIFICANTES.": 1827232.1,
+                    "MANUTEN\u00c7\u00c3O DE ESCRIT\u00d3RIO DE APOIO \u00c0 ATIVIDADE PARLAMENTAR": 1815430.98,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE VE\u00cdCULOS AUTOMOTORES": 1727600.6
+                }
+            },
+            "bottom_net_expenses": {
+                "valorLiquido": {
+                    "AQUISI\u00c7\u00c3O DE TOKENS E CERTIFICADOS DIGITAIS": 374.9,
+                    "ASSINATURA DE PUBLICA\u00c7\u00d5ES": 2688.7400000000002,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE EMBARCA\u00c7\u00d5ES": 6000.0,
+                    "PARTICIPA\u00c7\u00c3O EM CURSO, PALESTRA OU EVENTO SIMILAR": 7000.0,
+                    "PASSAGENS TERRESTRES, MAR\u00cdTIMAS OU FLUVIAIS": 13932.42
+                },
+                "valorDocumento": {
+                    "AQUISI\u00c7\u00c3O DE TOKENS E CERTIFICADOS DIGITAIS": 374.9,
+                    "ASSINATURA DE PUBLICA\u00c7\u00d5ES": 2688.7400000000002,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE EMBARCA\u00c7\u00d5ES": 6000.0,
+                    "PARTICIPA\u00c7\u00c3O EM CURSO, PALESTRA OU EVENTO SIMILAR": 7000.0,
+                    "PASSAGENS TERRESTRES, MAR\u00cdTIMAS OU FLUVIAIS": 13964.64
+                }
+            },
+            "top_gross_expenses": {
+                "valorLiquido": {
+                    "DIVULGA\u00c7\u00c3O DA ATIVIDADE PARLAMENTAR.": 3772057.82,
+                    "PASSAGEM A\u00c9REA - SIGEPA": 2363759.24,
+                    "COMBUST\u00cdVEIS E LUBRIFICANTES.": 1820193.36,
+                    "MANUTEN\u00c7\u00c3O DE ESCRIT\u00d3RIO DE APOIO \u00c0 ATIVIDADE PARLAMENTAR": 1806882.54,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE VE\u00cdCULOS AUTOMOTORES": 1706765.17
+                },
+                "valorDocumento": {
+                    "DIVULGA\u00c7\u00c3O DA ATIVIDADE PARLAMENTAR.": 3772817.82,
+                    "PASSAGEM A\u00c9REA - SIGEPA": 2363759.24,
+                    "COMBUST\u00cdVEIS E LUBRIFICANTES.": 1827232.1,
+                    "MANUTEN\u00c7\u00c3O DE ESCRIT\u00d3RIO DE APOIO \u00c0 ATIVIDADE PARLAMENTAR": 1815430.98,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE VE\u00cdCULOS AUTOMOTORES": 1727600.6
+                }
+            },
+            "bottom_gross_expenses": {
+                "valorLiquido": {
+                    "AQUISI\u00c7\u00c3O DE TOKENS E CERTIFICADOS DIGITAIS": 374.9,
+                    "ASSINATURA DE PUBLICA\u00c7\u00d5ES": 2688.7400000000002,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE EMBARCA\u00c7\u00d5ES": 6000.0,
+                    "PARTICIPA\u00c7\u00c3O EM CURSO, PALESTRA OU EVENTO SIMILAR": 7000.0,
+                    "PASSAGENS TERRESTRES, MAR\u00cdTIMAS OU FLUVIAIS": 13932.42
+                },
+                "valorDocumento": {
+                    "AQUISI\u00c7\u00c3O DE TOKENS E CERTIFICADOS DIGITAIS": 374.9,
+                    "ASSINATURA DE PUBLICA\u00c7\u00d5ES": 2688.7400000000002,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE EMBARCA\u00c7\u00d5ES": 6000.0,
+                    "PARTICIPA\u00c7\u00c3O EM CURSO, PALESTRA OU EVENTO SIMILAR": 7000.0,
+                    "PASSAGENS TERRESTRES, MAR\u00cdTIMAS OU FLUVIAIS": 13964.64
+                }
+            },
+            "summary_statistics": {
+                "valorLiquido": {
+                    "AQUISI\u00c7\u00c3O DE TOKENS E CERTIFICADOS DIGITAIS": 374.9,
+                    "ASSINATURA DE PUBLICA\u00c7\u00d5ES": 2688.7400000000002,
+                    "COMBUST\u00cdVEIS E LUBRIFICANTES.": 1820193.36,
+                    "DIVULGA\u00c7\u00c3O DA ATIVIDADE PARLAMENTAR.": 3772057.82,
+                    "FORNECIMENTO DE ALIMENTA\u00c7\u00c3O DO PARLAMENTAR": 51465.57,
+                    "HOSPEDAGEM ,EXCETO DO PARLAMENTAR NO DISTRITO FEDERAL.": 279593.5,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE AERONAVES": 119878.8,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE EMBARCA\u00c7\u00d5ES": 6000.0,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE VE\u00cdCULOS AUTOMOTORES": 1706765.17,
+                    "MANUTEN\u00c7\u00c3O DE ESCRIT\u00d3RIO DE APOIO \u00c0 ATIVIDADE PARLAMENTAR": 1806882.54,
+                    "PARTICIPA\u00c7\u00c3O EM CURSO, PALESTRA OU EVENTO SIMILAR": 7000.0,
+                    "PASSAGEM A\u00c9REA - REEMBOLSO": 15280.3,
+                    "PASSAGEM A\u00c9REA - RPA": 30992.25,
+                    "PASSAGEM A\u00c9REA - SIGEPA": 2363759.24,
+                    "PASSAGENS TERRESTRES, MAR\u00cdTIMAS OU FLUVIAIS": 13932.42,
+                    "SERVI\u00c7O DE SEGURAN\u00c7A PRESTADO POR EMPRESA ESPECIALIZADA.": 59917.3,
+                    "SERVI\u00c7O DE T\u00c1XI, PED\u00c1GIO E ESTACIONAMENTO": 77125.85,
+                    "TELEFONIA": 152722.3
+                },
+                "valorDocumento": {
+                    "AQUISI\u00c7\u00c3O DE TOKENS E CERTIFICADOS DIGITAIS": 374.9,
+                    "ASSINATURA DE PUBLICA\u00c7\u00d5ES": 2688.7400000000002,
+                    "COMBUST\u00cdVEIS E LUBRIFICANTES.": 1827232.1,
+                    "DIVULGA\u00c7\u00c3O DA ATIVIDADE PARLAMENTAR.": 3772817.82,
+                    "FORNECIMENTO DE ALIMENTA\u00c7\u00c3O DO PARLAMENTAR": 52642.52,
+                    "HOSPEDAGEM ,EXCETO DO PARLAMENTAR NO DISTRITO FEDERAL.": 280535.35,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE AERONAVES": 119878.8,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE EMBARCA\u00c7\u00d5ES": 6000.0,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE VE\u00cdCULOS AUTOMOTORES": 1727600.6,
+                    "MANUTEN\u00c7\u00c3O DE ESCRIT\u00d3RIO DE APOIO \u00c0 ATIVIDADE PARLAMENTAR": 1815430.98,
+                    "PARTICIPA\u00c7\u00c3O EM CURSO, PALESTRA OU EVENTO SIMILAR": 7000.0,
+                    "PASSAGEM A\u00c9REA - REEMBOLSO": 16518.93,
+                    "PASSAGEM A\u00c9REA - RPA": 30992.25,
+                    "PASSAGEM A\u00c9REA - SIGEPA": 2363759.24,
+                    "PASSAGENS TERRESTRES, MAR\u00cdTIMAS OU FLUVIAIS": 13964.64,
+                    "SERVI\u00c7O DE SEGURAN\u00c7A PRESTADO POR EMPRESA ESPECIALIZADA.": 59917.3,
+                    "SERVI\u00c7O DE T\u00c1XI, PED\u00c1GIO E ESTACIONAMENTO": 78294.11,
+                    "TELEFONIA": 164177.48
+                },
+                "average_net": {
+                    "AQUISI\u00c7\u00c3O DE TOKENS E CERTIFICADOS DIGITAIS": 374.9,
+                    "ASSINATURA DE PUBLICA\u00c7\u00d5ES": 206.82615384615386,
+                    "COMBUST\u00cdVEIS E LUBRIFICANTES.": 393.5553210810811,
+                    "DIVULGA\u00c7\u00c3O DA ATIVIDADE PARLAMENTAR.": 6796.500576576576,
+                    "FORNECIMENTO DE ALIMENTA\u00c7\u00c3O DO PARLAMENTAR": 82.344912,
+                    "HOSPEDAGEM ,EXCETO DO PARLAMENTAR NO DISTRITO FEDERAL.": 603.8736501079914,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE AERONAVES": 17125.542857142857,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE EMBARCA\u00c7\u00d5ES": 6000.0,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE VE\u00cdCULOS AUTOMOTORES": 6719.547913385826,
+                    "MANUTEN\u00c7\u00c3O DE ESCRIT\u00d3RIO DE APOIO \u00c0 ATIVIDADE PARLAMENTAR": 1657.690403669725,
+                    "PARTICIPA\u00c7\u00c3O EM CURSO, PALESTRA OU EVENTO SIMILAR": 7000.0,
+                    "PASSAGEM A\u00c9REA - REEMBOLSO": 2182.9,
+                    "PASSAGEM A\u00c9REA - RPA": 1347.4891304347825,
+                    "PASSAGEM A\u00c9REA - SIGEPA": 1351.4918467695827,
+                    "PASSAGENS TERRESTRES, MAR\u00cdTIMAS OU FLUVIAIS": 278.6484,
+                    "SERVI\u00c7O DE SEGURAN\u00c7A PRESTADO POR EMPRESA ESPECIALIZADA.": 2139.9035714285715,
+                    "SERVI\u00c7O DE T\u00c1XI, PED\u00c1GIO E ESTACIONAMENTO": 96.4073125,
+                    "TELEFONIA": 445.2545189504373
+                },
+                "average_gross": {
+                    "AQUISI\u00c7\u00c3O DE TOKENS E CERTIFICADOS DIGITAIS": 374.9,
+                    "ASSINATURA DE PUBLICA\u00c7\u00d5ES": 206.82615384615386,
+                    "COMBUST\u00cdVEIS E LUBRIFICANTES.": 395.0772108108108,
+                    "DIVULGA\u00c7\u00c3O DA ATIVIDADE PARLAMENTAR.": 6797.869945945946,
+                    "FORNECIMENTO DE ALIMENTA\u00c7\u00c3O DO PARLAMENTAR": 84.228032,
+                    "HOSPEDAGEM ,EXCETO DO PARLAMENTAR NO DISTRITO FEDERAL.": 605.9078833693304,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE AERONAVES": 17125.542857142857,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE EMBARCA\u00c7\u00d5ES": 6000.0,
+                    "LOCA\u00c7\u00c3O OU FRETAMENTO DE VE\u00cdCULOS AUTOMOTORES": 6801.577165354331,
+                    "MANUTEN\u00c7\u00c3O DE ESCRIT\u00d3RIO DE APOIO \u00c0 ATIVIDADE PARLAMENTAR": 1665.533009174312,
+                    "PARTICIPA\u00c7\u00c3O EM CURSO, PALESTRA OU EVENTO SIMILAR": 7000.0,
+                    "PASSAGEM A\u00c9REA - REEMBOLSO": 2359.847142857143,
+                    "PASSAGEM A\u00c9REA - RPA": 1347.4891304347825,
+                    "PASSAGEM A\u00c9REA - SIGEPA": 1351.4918467695827,
+                    "PASSAGENS TERRESTRES, MAR\u00cdTIMAS OU FLUVIAIS": 279.2928,
+                    "SERVI\u00c7O DE SEGURAN\u00c7A PRESTADO POR EMPRESA ESPECIALIZADA.": 2139.9035714285715,
+                    "SERVI\u00c7O DE T\u00c1XI, PED\u00c1GIO E ESTACIONAMENTO": 97.8676375,
+                    "TELEFONIA": 478.6515451895044
+                }
+            }
+        }
+    }
+]

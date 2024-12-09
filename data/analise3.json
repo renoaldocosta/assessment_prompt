@@ -1,0 +1,2131 @@
+[
+    {
+        "Name": "Analysis of Deputy Expenses",
+        "Findings": {
+            "top_spenders": [
+                {
+                    "id": 160600,
+                    "nome": "Arthur Oliveira Maia",
+                    "valorLiquido": 80339.4,
+                    "valorDocumento": 80357.23,
+                    "valorGlosa": 17.83
+                },
+                {
+                    "id": 220540,
+                    "nome": "Duda Ramos",
+                    "valorLiquido": 79403.25,
+                    "valorDocumento": 79403.25,
+                    "valorGlosa": 0.0
+                },
+                {
+                    "id": 73486,
+                    "nome": "Pompeo de Mattos",
+                    "valorLiquido": 76865.09,
+                    "valorDocumento": 76877.76,
+                    "valorGlosa": 12.67
+                },
+                {
+                    "id": 141458,
+                    "nome": "Jo\u00e3o Carlos Bacelar",
+                    "valorLiquido": 63790.84,
+                    "valorDocumento": 65000.7,
+                    "valorGlosa": 1209.86
+                },
+                {
+                    "id": 74467,
+                    "nome": "Dami\u00e3o Feliciano",
+                    "valorLiquido": 58766.29,
+                    "valorDocumento": 58766.29,
+                    "valorGlosa": 0.0
+                }
+            ],
+            "bottom_spenders": [
+                {
+                    "id": 204553,
+                    "nome": "Pastor Sargento Isid\u00f3rio",
+                    "valorLiquido": 901.3100000000002,
+                    "valorDocumento": 1122.1200000000001,
+                    "valorGlosa": 220.81
+                },
+                {
+                    "id": 204534,
+                    "nome": "Tabata Amaral",
+                    "valorLiquido": 383.84000000000015,
+                    "valorDocumento": 418.7600000000002,
+                    "valorGlosa": 34.92
+                },
+                {
+                    "id": 220657,
+                    "nome": "Andr\u00e9 Fernandes",
+                    "valorLiquido": -176.88,
+                    "valorDocumento": -176.88,
+                    "valorGlosa": 0.0
+                },
+                {
+                    "id": 220694,
+                    "nome": "Ricardo Maia",
+                    "valorLiquido": -1790.23,
+                    "valorDocumento": -1790.23,
+                    "valorGlosa": 0.0
+                },
+                {
+                    "id": 220614,
+                    "nome": "Dr. Daniel Soranz",
+                    "valorLiquido": -5752.780000000001,
+                    "valorDocumento": -5752.780000000001,
+                    "valorGlosa": 0.0
+                }
+            ],
+            "glosa_stats": [
+                {
+                    "nome": "Danilo Forte",
+                    "glosa_percentage": 0.2716614430900526
+                },
+                {
+                    "nome": "Julio Arcoverde",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Fausto Pinato",
+                    "glosa_percentage": 0.3179659776403925
+                },
+                {
+                    "nome": "F\u00e1bio Henrique",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Bacelar",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Felipe Carreras",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Arlindo Chinaglia",
+                    "glosa_percentage": 0.26588783535698096
+                },
+                {
+                    "nome": "Celso Russomanno",
+                    "glosa_percentage": 0.36226708168262545
+                },
+                {
+                    "nome": "Pompeo de Mattos",
+                    "glosa_percentage": 0.01648070911535404
+                },
+                {
+                    "nome": "Ivan Valente",
+                    "glosa_percentage": 0.3403029639445093
+                },
+                {
+                    "nome": "Alberto Fraga",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Osmar Terra",
+                    "glosa_percentage": 0.5709640247307465
+                },
+                {
+                    "nome": "Benedita da Silva",
+                    "glosa_percentage": 0.012965725902325361
+                },
+                {
+                    "nome": "Dilceu Sperafico",
+                    "glosa_percentage": 0.26300646796173444
+                },
+                {
+                    "nome": "Luiz Carlos Hauly",
+                    "glosa_percentage": 0.24081125865326958
+                },
+                {
+                    "nome": "Renildo Calheiros",
+                    "glosa_percentage": 0.05876379867075552
+                },
+                {
+                    "nome": "Luiz Couto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Wellington Roberto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Wilson Santiago",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Bosco Costa",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alice Portugal",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Daniel Almeida",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Elcione Barbalho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jos\u00e9 Priante",
+                    "glosa_percentage": 1.1796437357360916
+                },
+                {
+                    "nome": "Raimundo Santos",
+                    "glosa_percentage": 0.7608556121845209
+                },
+                {
+                    "nome": "\u00c1tila Lins",
+                    "glosa_percentage": 0.5541688487461828
+                },
+                {
+                    "nome": "Pauderney Avelino",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Josias Gomes",
+                    "glosa_percentage": 0.09342054849953685
+                },
+                {
+                    "nome": "Leonardo Monteiro",
+                    "glosa_percentage": 0.2283528935924632
+                },
+                {
+                    "nome": "M\u00e1rio Heringer",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Odair Cunha",
+                    "glosa_percentage": 0.009633397834283722
+                },
+                {
+                    "nome": "Patrus Ananias",
+                    "glosa_percentage": 0.14688523160049832
+                },
+                {
+                    "nome": "Reginaldo Lopes",
+                    "glosa_percentage": 0.08038231589050408
+                },
+                {
+                    "nome": "Chico Alencar",
+                    "glosa_percentage": 0.004595303844553737
+                },
+                {
+                    "nome": "Julio Lopes",
+                    "glosa_percentage": 0.19543464665415888
+                },
+                {
+                    "nome": "Carlos Sampaio",
+                    "glosa_percentage": 0.3291892758463502
+                },
+                {
+                    "nome": "Gilberto Nascimento",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jefferson Campos",
+                    "glosa_percentage": 1.4275751205869882
+                },
+                {
+                    "nome": "Vicentinho",
+                    "glosa_percentage": 0.7053319686415619
+                },
+                {
+                    "nome": "J\u00falio Cesar",
+                    "glosa_percentage": 0.8347020538805858
+                },
+                {
+                    "nome": "Silas C\u00e2mara",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rubens Otoni",
+                    "glosa_percentage": 0.28243933728374776
+                },
+                {
+                    "nome": "Geraldo Resende",
+                    "glosa_percentage": 0.16602853474167142
+                },
+                {
+                    "nome": "Vander Loubet",
+                    "glosa_percentage": 0.0371257300106812
+                },
+                {
+                    "nome": "Giacobo",
+                    "glosa_percentage": 0.0053202537849726325
+                },
+                {
+                    "nome": "Maria do Ros\u00e1rio",
+                    "glosa_percentage": 0.14488925476770273
+                },
+                {
+                    "nome": "Mendon\u00e7a Filho",
+                    "glosa_percentage": 0.39942045895959427
+                },
+                {
+                    "nome": "Eun\u00edcio Oliveira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dami\u00e3o Feliciano",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Luciano Bivar",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Claudio Cajado",
+                    "glosa_percentage": 0.3672566548989593
+                },
+                {
+                    "nome": "Jo\u00e3o Le\u00e3o",
+                    "glosa_percentage": 0.623355949934954
+                },
+                {
+                    "nome": "Jos\u00e9 Rocha",
+                    "glosa_percentage": 2.5069420169046404
+                },
+                {
+                    "nome": "Paulo Magalh\u00e3es",
+                    "glosa_percentage": 0.49132113785298037
+                },
+                {
+                    "nome": "Lincoln Portela",
+                    "glosa_percentage": 0.03506616283603904
+                },
+                {
+                    "nome": "A\u00e9cio Neves",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alberto Mour\u00e3o",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Luiza Erundina",
+                    "glosa_percentage": 0.8866166122328591
+                },
+                {
+                    "nome": "Jandira Feghali",
+                    "glosa_percentage": 0.021857533488863812
+                },
+                {
+                    "nome": "Laura Carneiro",
+                    "glosa_percentage": 0.8565459688285593
+                },
+                {
+                    "nome": "Lindbergh Farias",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Leo Prates",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "M\u00e1rcio Jerry",
+                    "glosa_percentage": 0.2903819996516157
+                },
+                {
+                    "nome": "Clodoaldo Magalh\u00e3es",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Waldemar Oliveira",
+                    "glosa_percentage": 2.370095481378795
+                },
+                {
+                    "nome": "Leur Lomanto J\u00fanior",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Eduardo Bolsonaro",
+                    "glosa_percentage": 0.005531486816779343
+                },
+                {
+                    "nome": "Fernando Monteiro",
+                    "glosa_percentage": 9.190359265598866
+                },
+                {
+                    "nome": "Stefano Aguiar",
+                    "glosa_percentage": 0.04468996728200335
+                },
+                {
+                    "nome": "Lafayette de Andrada",
+                    "glosa_percentage": 1.2865571428138973
+                },
+                {
+                    "nome": "Cobalchini",
+                    "glosa_percentage": 0.871760499209253
+                },
+                {
+                    "nome": "Ismael",
+                    "glosa_percentage": 0.03229297664664194
+                },
+                {
+                    "nome": "Luciano Azevedo",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Socorro Neri",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Gleisi Hoffmann",
+                    "glosa_percentage": 0.1213481525948421
+                },
+                {
+                    "nome": "Ana Paula Le\u00e3o",
+                    "glosa_percentage": 0.2400246754339231
+                },
+                {
+                    "nome": "Benes Leoc\u00e1dio",
+                    "glosa_percentage": 0.0056097552585501805
+                },
+                {
+                    "nome": "Darci de Matos",
+                    "glosa_percentage": 0.09420329246477352
+                },
+                {
+                    "nome": "Adriano do Baldy",
+                    "glosa_percentage": 0.06575744974106965
+                },
+                {
+                    "nome": "Pedro Paulo",
+                    "glosa_percentage": 0.031162365585031347
+                },
+                {
+                    "nome": "Leonardo Gadelha",
+                    "glosa_percentage": 0.8630239637999035
+                },
+                {
+                    "nome": "Pedro Lucas Fernandes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "\u00c1tila Lira",
+                    "glosa_percentage": 1.0447101852213012
+                },
+                {
+                    "nome": "Ant\u00f4nia L\u00facia",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Andr\u00e9 Figueiredo",
+                    "glosa_percentage": 3.6073404857148312
+                },
+                {
+                    "nome": "Marcelo Moraes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Afonso Hamm",
+                    "glosa_percentage": 1.1982646148971423
+                },
+                {
+                    "nome": "L\u00eddice da Mata",
+                    "glosa_percentage": 0.038409176274160156
+                },
+                {
+                    "nome": "Arnaldo Jardim",
+                    "glosa_percentage": 0.2395204327160345
+                },
+                {
+                    "nome": "Carlos Zarattini",
+                    "glosa_percentage": 0.513827602125397
+                },
+                {
+                    "nome": "Cleber Verde",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dagoberto Nogueira",
+                    "glosa_percentage": 0.24958276390248144
+                },
+                {
+                    "nome": "Eduardo da Fonte",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Fernando Coelho Filho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Hugo Leal",
+                    "glosa_percentage": 1.4580082710477413
+                },
+                {
+                    "nome": "Jilmar Tatto",
+                    "glosa_percentage": 1.6596457782424208
+                },
+                {
+                    "nome": "Jo\u00e3o Carlos Bacelar",
+                    "glosa_percentage": 1.8613030321211925
+                },
+                {
+                    "nome": "Jo\u00e3o Maia",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jos\u00e9 Airton F\u00e9lix Cirilo",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jos\u00e9 Guimar\u00e3es",
+                    "glosa_percentage": 0.20914727045087717
+                },
+                {
+                    "nome": "L\u00e1zaro Botelho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Luiz Carlos Busato",
+                    "glosa_percentage": 0.27015919658927645
+                },
+                {
+                    "nome": "Luiz Fernando Faria",
+                    "glosa_percentage": 0.029082064297800338
+                },
+                {
+                    "nome": "Paulo Abi-Ackel",
+                    "glosa_percentage": 0.5517169540177186
+                },
+                {
+                    "nome": "Paulinho da For\u00e7a",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rodrigo de Castro",
+                    "glosa_percentage": 0.06398280792107162
+                },
+                {
+                    "nome": "Vinicius Carvalho",
+                    "glosa_percentage": 0.01544631806628691
+                },
+                {
+                    "nome": "Domingos Neto",
+                    "glosa_percentage": 0.89837096050686
+                },
+                {
+                    "nome": "M\u00e1rcio Marinho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Glauber Braga",
+                    "glosa_percentage": 1.0278085984600516
+                },
+                {
+                    "nome": "Renilce Nicodemos",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Marcel van Hattem",
+                    "glosa_percentage": 0.04864099948612142
+                },
+                {
+                    "nome": "T\u00falio Gad\u00ealha",
+                    "glosa_percentage": 0.15257664174804147
+                },
+                {
+                    "nome": "Marcelo Queiroz",
+                    "glosa_percentage": 0.09609139240303324
+                },
+                {
+                    "nome": "Luis Tib\u00e9",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Aureo Ribeiro",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Paulo Folletto",
+                    "glosa_percentage": 0.02782211960183866
+                },
+                {
+                    "nome": "Weliton Prado",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Aguinaldo Ribeiro",
+                    "glosa_percentage": 0.4931475460528731
+                },
+                {
+                    "nome": "Marcon",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Bohn Gass",
+                    "glosa_percentage": 0.09601378071026165
+                },
+                {
+                    "nome": "Arthur Lira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alexandre Leite",
+                    "glosa_percentage": 0.008652720517127298
+                },
+                {
+                    "nome": "Jonas Donizette",
+                    "glosa_percentage": 0.1675016679970531
+                },
+                {
+                    "nome": "Antonio Brito",
+                    "glosa_percentage": 0.31525360791634055
+                },
+                {
+                    "nome": "Padre Jo\u00e3o",
+                    "glosa_percentage": 0.061537719001882346
+                },
+                {
+                    "nome": "Paulo Freire Costa",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alceu Moreira",
+                    "glosa_percentage": 1.536071714047337
+                },
+                {
+                    "nome": "Waldenor Pereira",
+                    "glosa_percentage": 4.784309674851057
+                },
+                {
+                    "nome": "Erika Kokay",
+                    "glosa_percentage": 0.05258369263154664
+                },
+                {
+                    "nome": "Diego Andrade",
+                    "glosa_percentage": 0.3692836322220721
+                },
+                {
+                    "nome": "Vinicius Gurgel",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Zeca Dirceu",
+                    "glosa_percentage": 0.26510689471152843
+                },
+                {
+                    "nome": "Fl\u00e1via Morais",
+                    "glosa_percentage": 0.42201422847181236
+                },
+                {
+                    "nome": "Dimas Fabiano",
+                    "glosa_percentage": 0.09983369662218869
+                },
+                {
+                    "nome": "Arthur Oliveira Maia",
+                    "glosa_percentage": 0.02218842038233523
+                },
+                {
+                    "nome": "Pr. Marco Feliciano",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Valmir Assun\u00e7\u00e3o",
+                    "glosa_percentage": 0.1081537294893457
+                },
+                {
+                    "nome": "Romero Rodrigues",
+                    "glosa_percentage": 0.007599461523869168
+                },
+                {
+                    "nome": "Z\u00e9 Silva",
+                    "glosa_percentage": 0.3297663903541824
+                },
+                {
+                    "nome": "Eros Biondini",
+                    "glosa_percentage": 0.13130778333477472
+                },
+                {
+                    "nome": "Pastor Eurico",
+                    "glosa_percentage": 0.22756048146585034
+                },
+                {
+                    "nome": "Augusto Coutinho",
+                    "glosa_percentage": 0.13578602325964287
+                },
+                {
+                    "nome": "F\u00e9lix Mendon\u00e7a J\u00fanior",
+                    "glosa_percentage": 0.07021696104737492
+                },
+                {
+                    "nome": "Giovani Cherini",
+                    "glosa_percentage": 0.246409727145537
+                },
+                {
+                    "nome": "Hugo Motta",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Domingos S\u00e1vio",
+                    "glosa_percentage": 10.025738502830347
+                },
+                {
+                    "nome": "Tiririca",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Pezenti",
+                    "glosa_percentage": 1.7651826311523826
+                },
+                {
+                    "nome": "Emidinho Madeira",
+                    "glosa_percentage": 0.2941555183575244
+                },
+                {
+                    "nome": "Kiko Celeguim",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Luiz Nishimori",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Ronaldo Nogueira",
+                    "glosa_percentage": 0.760926578385365
+                },
+                {
+                    "nome": "Carmen Zanotto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rodrigo Valadares",
+                    "glosa_percentage": 0.17903185840848082
+                },
+                {
+                    "nome": "Magda Mofatto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Paul\u00e3o",
+                    "glosa_percentage": 0.7835882004646818
+                },
+                {
+                    "nome": "Miguel \u00c2ngelo",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Capit\u00e3o Augusto",
+                    "glosa_percentage": 0.37779070948910504
+                },
+                {
+                    "nome": "Afonso Motta",
+                    "glosa_percentage": 0.20482825171727648
+                },
+                {
+                    "nome": "Marx Beltr\u00e3o",
+                    "glosa_percentage": 0.12160661410122703
+                },
+                {
+                    "nome": "Elmar Nascimento",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jorge Solla",
+                    "glosa_percentage": 0.13683834231289738
+                },
+                {
+                    "nome": "M\u00e1rio Negromonte Jr.",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Paulo Azi",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Luizianne Lins",
+                    "glosa_percentage": 0.7737372882676861
+                },
+                {
+                    "nome": "Evair Vieira de Melo",
+                    "glosa_percentage": 0.21517523097893798
+                },
+                {
+                    "nome": "Helder Salom\u00e3o",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "C\u00e9lio Silveira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Aluisio Mendes",
+                    "glosa_percentage": 0.08060386672417162
+                },
+                {
+                    "nome": "Hildo Rocha",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rubens Pereira J\u00fanior",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Misael Varella",
+                    "glosa_percentage": 0.1537368824005092
+                },
+                {
+                    "nome": "Newton Cardoso Jr",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Delegado \u00c9der Mauro",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "H\u00e9lio Leite",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Joaquim Passarinho",
+                    "glosa_percentage": 0.21925393632192183
+                },
+                {
+                    "nome": "Aliel Machado",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Diego Garcia",
+                    "glosa_percentage": 1.0715114848842704
+                },
+                {
+                    "nome": "Luciano Ducci",
+                    "glosa_percentage": 0.3562096696601252
+                },
+                {
+                    "nome": "Sergio Souza",
+                    "glosa_percentage": 0.040273246857650775
+                },
+                {
+                    "nome": "Toninho Wandscheer",
+                    "glosa_percentage": 0.749208088327805
+                },
+                {
+                    "nome": "Altineu C\u00f4rtes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Marcos Soares",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Soraya Santos",
+                    "glosa_percentage": 0.1698962349065095
+                },
+                {
+                    "nome": "S\u00f3stenes Cavalcante",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Lucio Mosquini",
+                    "glosa_percentage": 0.9508984071459359
+                },
+                {
+                    "nome": "Covatti Filho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Heitor Schuch",
+                    "glosa_percentage": 0.7044604371259828
+                },
+                {
+                    "nome": "Jo\u00e3o Daniel",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alex Manente",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Baleia Rossi",
+                    "glosa_percentage": 0.0691791413406007
+                },
+                {
+                    "nome": "Marcio Alvino",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Miguel Lombardi",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Nilto Tatto",
+                    "glosa_percentage": 0.2936789203409932
+                },
+                {
+                    "nome": "Orlando Silva",
+                    "glosa_percentage": 0.06281149039545192
+                },
+                {
+                    "nome": "Vitor Lippi",
+                    "glosa_percentage": 0.11009617412885385
+                },
+                {
+                    "nome": "Carlos Henrique Gaguim",
+                    "glosa_percentage": 0.3451625726651654
+                },
+                {
+                    "nome": "Moses Rodrigues",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Marcelo \u00c1lvaro Ant\u00f4nio",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "M\u00e1rcio Biolchi",
+                    "glosa_percentage": 0.2746638821058106
+                },
+                {
+                    "nome": "Pastor Diniz",
+                    "glosa_percentage": 0.4823285814260343
+                },
+                {
+                    "nome": "Merlong Solano",
+                    "glosa_percentage": 0.8132711323590616
+                },
+                {
+                    "nome": "Fl\u00e1vio Nogueira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Greyce Elias",
+                    "glosa_percentage": 0.5531664145039883
+                },
+                {
+                    "nome": "Emanuel Pinheiro Neto",
+                    "glosa_percentage": 1.477450070352077
+                },
+                {
+                    "nome": "Dr. Luiz Ovando",
+                    "glosa_percentage": 0.07255315866465015
+                },
+                {
+                    "nome": "Da Vitoria",
+                    "glosa_percentage": 0.10750638344129931
+                },
+                {
+                    "nome": "Amaro Neto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Beto Pereira",
+                    "glosa_percentage": 1.2545124335476208
+                },
+                {
+                    "nome": "Silvia Cristina",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Gilson Marques",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Daniel Freitas",
+                    "glosa_percentage": 0.08065551203800561
+                },
+                {
+                    "nome": "Fabio Schiochet",
+                    "glosa_percentage": 0.005869035148406558
+                },
+                {
+                    "nome": "Caroline de Toni",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Julio Cesar Ribeiro",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Bia Kicis",
+                    "glosa_percentage": 0.008080981842762128
+                },
+                {
+                    "nome": "Coronel Chris\u00f3stomo",
+                    "glosa_percentage": 1.936059921892664
+                },
+                {
+                    "nome": "Ac\u00e1cio Favacho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Sargento Fahur",
+                    "glosa_percentage": 1.526806355386609
+                },
+                {
+                    "nome": "Bibo Nunes",
+                    "glosa_percentage": 0.16838979859460598
+                },
+                {
+                    "nome": "Jos\u00e9 Nelto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Gerv\u00e1sio Maia",
+                    "glosa_percentage": 0.2468544696749684
+                },
+                {
+                    "nome": "Pedro Lupion",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Vermelho",
+                    "glosa_percentage": 0.010785811049847705
+                },
+                {
+                    "nome": "Felipe Francischini",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Lucas Redecker",
+                    "glosa_percentage": 0.35769284133510454
+                },
+                {
+                    "nome": "Pedro Westphalen",
+                    "glosa_percentage": 0.1452733660124774
+                },
+                {
+                    "nome": "Fernanda Melchionna",
+                    "glosa_percentage": 2.2175530820652427
+                },
+                {
+                    "nome": "Gustinho Ribeiro",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Daniel Trzeciak",
+                    "glosa_percentage": 0.33193938336934625
+                },
+                {
+                    "nome": "Luisa Canziani",
+                    "glosa_percentage": 2.2516703803357174
+                },
+                {
+                    "nome": "Filipe Barros",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dr. Zacharias Calil",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Sanderson",
+                    "glosa_percentage": 0.4900963482571744
+                },
+                {
+                    "nome": "Glaustin da Fokus",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Ossesio Silva",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Andr\u00e9 Ferreira",
+                    "glosa_percentage": 4.187578233280289
+                },
+                {
+                    "nome": "Carlos Veras",
+                    "glosa_percentage": 1.3094478133029157
+                },
+                {
+                    "nome": "Fernando Rodolfo",
+                    "glosa_percentage": 0.17035972063439525
+                },
+                {
+                    "nome": "Marcos Aur\u00e9lio Sampaio",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Isnaldo Bulh\u00f5es Jr.",
+                    "glosa_percentage": 0.7561722165363399
+                },
+                {
+                    "nome": "Otoni de Paula",
+                    "glosa_percentage": 0.556952229182694
+                },
+                {
+                    "nome": "Helio Lopes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Fernando Mineiro",
+                    "glosa_percentage": 0.9307312569339479
+                },
+                {
+                    "nome": "Nelson Barbudo",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Doutor Luizinho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Nat\u00e1lia Bonavides",
+                    "glosa_percentage": 0.09058169786432006
+                },
+                {
+                    "nome": "Luiz Lima",
+                    "glosa_percentage": 0.12336264714379037
+                },
+                {
+                    "nome": "Gutemberg Reis",
+                    "glosa_percentage": 0.12571773282497534
+                },
+                {
+                    "nome": "Juninho do Pneu",
+                    "glosa_percentage": 0.027416486810878427
+                },
+                {
+                    "nome": "Daniela do Waguinho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Chris Tonietto",
+                    "glosa_percentage": 0.0749505300110895
+                },
+                {
+                    "nome": "Tal\u00edria Petrone",
+                    "glosa_percentage": 2.688838676786911
+                },
+                {
+                    "nome": "Jos\u00e9 Medeiros",
+                    "glosa_percentage": 0.3316148040139121
+                },
+                {
+                    "nome": "General Gir\u00e3o",
+                    "glosa_percentage": 0.4606844839889951
+                },
+                {
+                    "nome": "Nicoletti",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rog\u00e9rio Correia",
+                    "glosa_percentage": 0.8936876026300231
+                },
+                {
+                    "nome": "Dr. Jaziel",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Euclydes Pettersen",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Luiz Carlos Motta",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Mauro Benevides Filho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "C\u00e9lio Studart",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rob\u00e9rio Monteiro",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Gilberto Abramo",
+                    "glosa_percentage": 0.36500507798273324
+                },
+                {
+                    "nome": "Paulo Guedes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Fred Costa",
+                    "glosa_percentage": 0.6641552337754363
+                },
+                {
+                    "nome": "Airton Faleiro",
+                    "glosa_percentage": 0.9020186232857114
+                },
+                {
+                    "nome": "J\u00fanior Ferrari",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Olival Marques",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alencar Santana",
+                    "glosa_percentage": 0.6980873352299777
+                },
+                {
+                    "nome": "Cezinha de Madureira",
+                    "glosa_percentage": 1.0325194464026795
+                },
+                {
+                    "nome": "Marcos Pereira",
+                    "glosa_percentage": 0.015773473207893143
+                },
+                {
+                    "nome": "Carla Zambelli",
+                    "glosa_percentage": 0.11562773808590507
+                },
+                {
+                    "nome": "Igor Timo",
+                    "glosa_percentage": 1.7775027473406808
+                },
+                {
+                    "nome": "David Soares",
+                    "glosa_percentage": 1.0149938333834974
+                },
+                {
+                    "nome": "Delegado Marcelo Freitas",
+                    "glosa_percentage": 0.12533470867098578
+                },
+                {
+                    "nome": "Andr\u00e9 Janones",
+                    "glosa_percentage": 2.59767733290321
+                },
+                {
+                    "nome": "Z\u00e9 Vitor",
+                    "glosa_percentage": 0.028532355548530255
+                },
+                {
+                    "nome": "Dr. Frederico",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Pinheirinho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rosana Valle",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Luiz Philippe de Orleans e Bragan\u00e7a",
+                    "glosa_percentage": 0.04664546161823143
+                },
+                {
+                    "nome": "Adriana Ventura",
+                    "glosa_percentage": 0.18172287935373715
+                },
+                {
+                    "nome": "Idilvan Alencar",
+                    "glosa_percentage": 0.24451660802722097
+                },
+                {
+                    "nome": "Tabata Amaral",
+                    "glosa_percentage": 8.338905339573977
+                },
+                {
+                    "nome": "S\u00e2mia Bomfim",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Kim Kataguiri",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Herc\u00edlio Coelho Diniz",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Maria Rosas",
+                    "glosa_percentage": 0.683548069025291
+                },
+                {
+                    "nome": "Eduardo Bismarck",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "AJ Albuquerque",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "J\u00fanior Mano",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Pastor Sargento Isid\u00f3rio",
+                    "glosa_percentage": 19.677931059066765
+                },
+                {
+                    "nome": "Sidney Leite",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Adolfo Viana",
+                    "glosa_percentage": 0.14302649971394701
+                },
+                {
+                    "nome": "Josimar Maranh\u00e3ozinho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Marreca Filho",
+                    "glosa_percentage": 0.1711745819319469
+                },
+                {
+                    "nome": "Raimundo Costa",
+                    "glosa_percentage": 0.009943449736949144
+                },
+                {
+                    "nome": "Pastor Gil",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alex Santana",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Capit\u00e3o Alberto Neto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Otto Alencar Filho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Junior Louren\u00e7o",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Charles Fernandes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jorge Braz",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Reinhold Stephanes",
+                    "glosa_percentage": 0.42163394482481314
+                },
+                {
+                    "nome": "C\u00e9lia Xakriab\u00e1",
+                    "glosa_percentage": 0.025261012450572173
+                },
+                {
+                    "nome": "Joseildo Ramos",
+                    "glosa_percentage": 0.12707224734037179
+                },
+                {
+                    "nome": "Nikolas Ferreira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Bruno Farias",
+                    "glosa_percentage": 0.7801002938221396
+                },
+                {
+                    "nome": "Dr. Gon\u00e7alo",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Ricardo Silva",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jorge Goetten",
+                    "glosa_percentage": 0.00818057855856336
+                },
+                {
+                    "nome": "Josivaldo JP",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Ely Santos",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Marco Brasil",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Eliza Virg\u00ednia",
+                    "glosa_percentage": 0.23387196474000177
+                },
+                {
+                    "nome": "Gilvan da Federal",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jack Rocha",
+                    "glosa_percentage": 0.04489385602424269
+                },
+                {
+                    "nome": "Dr. Victor Linhalis",
+                    "glosa_percentage": 0.0411252817081797
+                },
+                {
+                    "nome": "Gilson Daniel",
+                    "glosa_percentage": 0.07715989944819758
+                },
+                {
+                    "nome": "Messias Donato",
+                    "glosa_percentage": 0.11278825534184506
+                },
+                {
+                    "nome": "Gilvan Maximo",
+                    "glosa_percentage": 4.868989384869627
+                },
+                {
+                    "nome": "Rafael Prudente",
+                    "glosa_percentage": 2.2113057002331034
+                },
+                {
+                    "nome": "Prof. Reginaldo Veras",
+                    "glosa_percentage": 0.09424323954607755
+                },
+                {
+                    "nome": "Fred Linhares",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Z\u00e9 Haroldo Cathedral",
+                    "glosa_percentage": 0.06916242791761067
+                },
+                {
+                    "nome": "Helena Lima",
+                    "glosa_percentage": 0.5732349619496956
+                },
+                {
+                    "nome": "Albuquerque",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Defensor St\u00e9lio Dener",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Duda Ramos",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alexandre Guimar\u00e3es",
+                    "glosa_percentage": 0.6229978498252801
+                },
+                {
+                    "nome": "Ricardo Ayres",
+                    "glosa_percentage": 0.26019138770229044
+                },
+                {
+                    "nome": "Antonio Andrade",
+                    "glosa_percentage": 0.07377090911735705
+                },
+                {
+                    "nome": "Filipe Martins",
+                    "glosa_percentage": 0.24671292736810352
+                },
+                {
+                    "nome": "Rodolfo Nogueira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Marcos Pollon",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Camila Jara",
+                    "glosa_percentage": 0.2679653535252455
+                },
+                {
+                    "nome": "Any Ortiz",
+                    "glosa_percentage": 0.5274941463296884
+                },
+                {
+                    "nome": "Mauricio Marcon",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Franciane Bayer",
+                    "glosa_percentage": 0.7406218504722384
+                },
+                {
+                    "nome": "Zucco",
+                    "glosa_percentage": 0.07812124630970536
+                },
+                {
+                    "nome": "Denise Pess\u00f4a",
+                    "glosa_percentage": 0.31259807403247386
+                },
+                {
+                    "nome": "Alexandre Lindenmeyer",
+                    "glosa_percentage": 2.1175419221715246
+                },
+                {
+                    "nome": "Daiana Santos",
+                    "glosa_percentage": 0.018029995641444533
+                },
+                {
+                    "nome": "Ana Paula Lima",
+                    "glosa_percentage": 1.922147739756683
+                },
+                {
+                    "nome": "Daniela Reinehr",
+                    "glosa_percentage": 0.1576487675680294
+                },
+                {
+                    "nome": "Z\u00e9 Trov\u00e3o",
+                    "glosa_percentage": 1.7488563226761982
+                },
+                {
+                    "nome": "Julia Zanatta",
+                    "glosa_percentage": 0.11697241411458417
+                },
+                {
+                    "nome": "Delegada Katarina",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Delegada Adriana Accorsi",
+                    "glosa_percentage": 0.029371537218143385
+                },
+                {
+                    "nome": "L\u00eada Borges",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Jeferson Rodrigues",
+                    "glosa_percentage": 0.026031195106981864
+                },
+                {
+                    "nome": "Gustavo Gayer",
+                    "glosa_percentage": 1.4113606043053082
+                },
+                {
+                    "nome": "Silvye Alves",
+                    "glosa_percentage": 0.005234259273798869
+                },
+                {
+                    "nome": "Ismael Alexandrino",
+                    "glosa_percentage": 8.325301614500907
+                },
+                {
+                    "nome": "Daniel Agrobom",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Marussa Boldrin",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dorinaldo Malafaia",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Cabo Gilberto Silva",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Sonize Barbosa",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alfredo Gaspar",
+                    "glosa_percentage": 0.009889904570849787
+                },
+                {
+                    "nome": "Augusto Puppio",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Josenildo",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Silvia Wai\u00e3pi",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Professora Goreth",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Luciano Amaral",
+                    "glosa_percentage": 0.6161093624481381
+                },
+                {
+                    "nome": "Daniel Barbosa",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Delegado Fabio Costa",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Murilo Galdino",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rafael Brito",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Gerlen Diniz",
+                    "glosa_percentage": 0.9892192532571243
+                },
+                {
+                    "nome": "Roberto Duarte",
+                    "glosa_percentage": 0.4951544910800222
+                },
+                {
+                    "nome": "Eduardo Velloso",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Coronel Ulysses",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Meire Serafim",
+                    "glosa_percentage": 0.07373737568038759
+                },
+                {
+                    "nome": "Zezinho Barbary",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Abilio Brunini",
+                    "glosa_percentage": 0.1985658675539266
+                },
+                {
+                    "nome": "Coronel Assis",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Coronel Fernanda",
+                    "glosa_percentage": 0.38497167156449663
+                },
+                {
+                    "nome": "Thiago Flores",
+                    "glosa_percentage": 0.006289624635201771
+                },
+                {
+                    "nome": "Tarc\u00edsio Motta",
+                    "glosa_percentage": 0.011221100112211
+                },
+                {
+                    "nome": "Marcelo Crivella",
+                    "glosa_percentage": 0.4193625605817233
+                },
+                {
+                    "nome": "Lebr\u00e3o",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Washington Quaqu\u00e1",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dimas Gadelha",
+                    "glosa_percentage": 1.5032681485123645
+                },
+                {
+                    "nome": "Dani Cunha",
+                    "glosa_percentage": 0.38115428310238153
+                },
+                {
+                    "nome": "Marcos Tavares",
+                    "glosa_percentage": 0.5230909443105425
+                },
+                {
+                    "nome": "Bandeira de Mello",
+                    "glosa_percentage": 0.8200076433170445
+                },
+                {
+                    "nome": "Reimont",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Max Lemos",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Cristiane Lopes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Maur\u00edcio Carvalho",
+                    "glosa_percentage": 0.06426834536238883
+                },
+                {
+                    "nome": "Dr. Fernando M\u00e1ximo",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "General Pazuello",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Bebeto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Roberto Monteiro Pai",
+                    "glosa_percentage": 0.3162523226366791
+                },
+                {
+                    "nome": "Dr. Daniel Soranz",
+                    "glosa_percentage": -0.0
+                },
+                {
+                    "nome": "Pastor Henrique Vieira",
+                    "glosa_percentage": 0.07736274240964261
+                },
+                {
+                    "nome": "Luciano Vieira",
+                    "glosa_percentage": 0.5304380931156796
+                },
+                {
+                    "nome": "Murillo Gouvea",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Sargento Portugal",
+                    "glosa_percentage": 0.36965515056083803
+                },
+                {
+                    "nome": "Delegado Ramagem",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Ros\u00e2ngela Reis",
+                    "glosa_percentage": 0.0436412460606105
+                },
+                {
+                    "nome": "Sargento Gon\u00e7alves",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Nely Aquino",
+                    "glosa_percentage": 0.08572753909117065
+                },
+                {
+                    "nome": "Duda Salabert",
+                    "glosa_percentage": 0.0743334362357223
+                },
+                {
+                    "nome": "Robinson Faria",
+                    "glosa_percentage": 0.010880700218216098
+                },
+                {
+                    "nome": "Delegada Ione",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rafael Simoes",
+                    "glosa_percentage": 0.20475847316156753
+                },
+                {
+                    "nome": "Paulinho Freire",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Mauricio do V\u00f4lei",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dandara",
+                    "glosa_percentage": 6.929989899908337
+                },
+                {
+                    "nome": "Pedro Aihara",
+                    "glosa_percentage": 0.08192758982214494
+                },
+                {
+                    "nome": "Samuel Viana",
+                    "glosa_percentage": 0.006614556761751987
+                },
+                {
+                    "nome": "Ana Pimentel",
+                    "glosa_percentage": 0.903896457938781
+                },
+                {
+                    "nome": "Ricardo Salles",
+                    "glosa_percentage": 0.11028269129869565
+                },
+                {
+                    "nome": "Bruno Ganem",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Antonio Carlos Rodrigues",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Guilherme Boulos",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Juliana Cardoso",
+                    "glosa_percentage": 0.024233881059223607
+                },
+                {
+                    "nome": "Rodrigo Gambale",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Delegado Bruno Lima",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rosangela Moro",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Erika Hilton",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Mauricio Neves",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Marangoni",
+                    "glosa_percentage": 1.8197854123058879
+                },
+                {
+                    "nome": "Delegado da Cunha",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Paulo Alexandre Barbosa",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Simone Marquetto",
+                    "glosa_percentage": 0.2236125372655752
+                },
+                {
+                    "nome": "Delegado Palumbo",
+                    "glosa_percentage": 0.17840039612405623
+                },
+                {
+                    "nome": "F\u00e1bio Teruel",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Delegado Paulo Bilynskyj",
+                    "glosa_percentage": 0.023058040381646373
+                },
+                {
+                    "nome": "Mario Frias",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Fernanda Pessoa",
+                    "glosa_percentage": 0.8750826340103858
+                },
+                {
+                    "nome": "Andr\u00e9 Fernandes",
+                    "glosa_percentage": -0.0
+                },
+                {
+                    "nome": "Luiz Gast\u00e3o",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dayany Bittencourt",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Yury do Pared\u00e3o",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Matheus Noronha",
+                    "glosa_percentage": 1.6748961543994627
+                },
+                {
+                    "nome": "Lucas Ramos",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Eriberto Medeiros",
+                    "glosa_percentage": 0.0566437619334229
+                },
+                {
+                    "nome": "Guilherme Uchoa",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Coronel Meira",
+                    "glosa_percentage": 0.006726949099866941
+                },
+                {
+                    "nome": "Pedro Campos",
+                    "glosa_percentage": 0.07680287901077892
+                },
+                {
+                    "nome": "Maria Arraes",
+                    "glosa_percentage": 0.17098052682033454
+                },
+                {
+                    "nome": "Lula da Fonte",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Iza Arruda",
+                    "glosa_percentage": 0.033247496065712964
+                },
+                {
+                    "nome": "Dilvanda Faro",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Henderson Pinto",
+                    "glosa_percentage": 0.04792886288284184
+                },
+                {
+                    "nome": "Delegado Caveira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dra. Alessandra Haber",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Ant\u00f4nio Doido",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Andreia Siqueira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Keniston Braga",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Tadeu Veneri",
+                    "glosa_percentage": 0.16523130367498598
+                },
+                {
+                    "nome": "Beto Richa",
+                    "glosa_percentage": 0.03837543291953066
+                },
+                {
+                    "nome": "Ti\u00e3o Medeiros",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Paulo Litro",
+                    "glosa_percentage": 0.03598469662654121
+                },
+                {
+                    "nome": "Duarte Jr.",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dr. Francisco",
+                    "glosa_percentage": 0.006571583228322962
+                },
+                {
+                    "nome": "Detinha",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Capit\u00e3o Alden",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Diego Coronel",
+                    "glosa_percentage": 0.29156929366349127
+                },
+                {
+                    "nome": "Dal Barreto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Roberta Roma",
+                    "glosa_percentage": 6.725758328077261
+                },
+                {
+                    "nome": "Ricardo Maia",
+                    "glosa_percentage": -0.0
+                },
+                {
+                    "nome": "Rog\u00e9ria Santos",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Ivoneide Caetano",
+                    "glosa_percentage": 0.10758999982595735
+                },
+                {
+                    "nome": "Jadyel Alencar",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Beto Preto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Castro Neto",
+                    "glosa_percentage": 3.056322548825432
+                },
+                {
+                    "nome": "Florentino Neto",
+                    "glosa_percentage": 0.2634372162614934
+                },
+                {
+                    "nome": "Delegado Matheus Laiola",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Geraldo Mendes",
+                    "glosa_percentage": 4.676564876035957
+                },
+                {
+                    "nome": "Neto Carletto",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Carol Dartora",
+                    "glosa_percentage": 0.04900454799901236
+                },
+                {
+                    "nome": "Padovani",
+                    "glosa_percentage": 0.0950479762687334
+                },
+                {
+                    "nome": "Gabriel Nunes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Saullo Vianna",
+                    "glosa_percentage": 0.46306077383243577
+                },
+                {
+                    "nome": "Adail Filho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Amom Mandel",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Alfredinho",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Adilson Barroso",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Professora Luciene Cavalcante",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Dr. Benjamim",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Reginete Bispo",
+                    "glosa_percentage": 0.004752442121591548
+                },
+                {
+                    "nome": "Luis Carlos Gomes",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Rodrigo Estacho",
+                    "glosa_percentage": 0.02642543832713289
+                },
+                {
+                    "nome": "Gabriel Mota",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Welter",
+                    "glosa_percentage": 0.11015178461439099
+                },
+                {
+                    "nome": "Gisela Simona",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Allan Garc\u00eas",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Saulo Pedroso",
+                    "glosa_percentage": 0.10668922881505542
+                },
+                {
+                    "nome": "Douglas Viegas",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Nitinho",
+                    "glosa_percentage": 1.7710371055154124
+                },
+                {
+                    "nome": "Dr Fl\u00e1vio",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "D\u00e9lio Pinheiro",
+                    "glosa_percentage": 0.8104253989214171
+                },
+                {
+                    "nome": "Dr. Remy Soares",
+                    "glosa_percentage": 2.3539748859976726
+                },
+                {
+                    "nome": "J\u00falio Oliveira",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Juliana Kolankiewicz",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Daniel Jos\u00e9",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Capit\u00e3o Samuel",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Lucyana Gen\u00e9sio",
+                    "glosa_percentage": 0.4199276983757497
+                },
+                {
+                    "nome": "Carla Ayres",
+                    "glosa_percentage": 0.06167599345078231
+                },
+                {
+                    "nome": "Pedro Jr",
+                    "glosa_percentage": 0.0
+                },
+                {
+                    "nome": "Mission\u00e1ria Michele Collins",
+                    "glosa_percentage": 0.06178132514333267
+                },
+                {
+                    "nome": "Pedro Tourinho",
+                    "glosa_percentage": 0.7915814288464995
+                },
+                {
+                    "nome": "Gl\u00e1ucia Santiago",
+                    "glosa_percentage": 0.02940669264622246
+                },
+                {
+                    "nome": "Luiz Fernando Vampiro",
+                    "glosa_percentage": 0.21178731755527883
+                },
+                {
+                    "nome": "Elisangela Araujo",
+                    "glosa_percentage": 0.061123698065231206
+                }
+            ]
+        }
+    }
+]

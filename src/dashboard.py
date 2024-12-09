@@ -1,91 +1,87 @@
-
-
 import streamlit as st
+import yaml
+import json
 import pandas as pd
-import os
-import joblib
-from dotenv import load_dotenv
-load_dotenv('../.env')
+import matplotlib.pyplot as plt
+import seaborn as sns
+from datetime import datetime
 
-from kdb_faiss import KDBFaiss
+st.set_page_config(page_title="Câmara dos Deputados", layout="centered")
 
+tab1, tab2, tab3 = st.tabs(["Overview", "Despesas", "Proposições"])
 
-import tabs
+with tab1:
+    st.title("Câmara dos Deputados")
+    
+    # Carregar arquivo YAML
+    with open("../data/config.yaml", "r", encoding="utf-8") as file:
+        config = yaml.safe_load(file)
+    
+    # Exibir texto sumarizado
+    st.write(config["overview_summary"])
+    
+    # Exibir gráfico
+    st.image("../docs/distribuicao_deputados.png", use_container_width=True)
+    
+    # Carregar e exibir insights
+    with open("../data/insights_distribuicao_deputados.json", "r", encoding="utf-8") as file:
+        insights_data = json.load(file)
+        
+    for insight in insights_data["insights"]:
+        st.subheader(insight["topic"])
+        st.write(insight["analysis"])
 
-# Cache data loading
-@st.cache_data
-def load_data(file_path):
-    data = pd.read_parquet(file_path)
-    data = data.sort_values('number')
-    return data
+with tab2:
+    st.title("Despesas dos Deputados")
+    
+    # Carregar e exibir insights sobre despesas
+    with open("../data/insights_despesas_deputados.json", "r", encoding="utf-8") as file:
+        insights_despesas = json.load(file)
+    
+    for insight in insights_despesas["insights"]:
+        st.subheader(insight["Topic"])
+        st.write(insight["Insight"])
+    
+    # Carregar dados dos deputados e criar selectbox
+    df_deputados = pd.read_parquet("../data/deputados.parquet")
+    deputado_selecionado = st.selectbox(
+        "Selecione um deputado:",
+        options=list(zip(df_deputados['id'], df_deputados['nome'])),
+        format_func=lambda x: x[1]
+    )
+    
+    # Carregar e plotar série temporal de despesas
+    df_despesas = pd.read_parquet("../data/serie_despesas_diárias_deputados.parquet")
+    
+    # Filtrar dados do deputado selecionado
+    df_desp_deputado = df_despesas[df_despesas['id'] == deputado_selecionado[0]]
+    
+    # Criar gráfico
+    plt.figure(figsize=(12, 6))
+    sns.barplot(data=df_desp_deputado, x='dia', y='valorLiquido', hue='tipo_despesa')
+    plt.title(f'Despesas do Deputado {deputado_selecionado[1]}')
+    plt.xlabel('Data')
+    plt.ylabel('Valor (R$)')
+    plt.xticks(rotation=90)
+    plt.grid(True)
+    plt.tight_layout()
+    
+    # Exibir gráfico no Streamlit
+    st.pyplot(plt)
 
-
-# Cache data loading for season and episode summaries
-@st.cache_data
-def load_joblib(file_path):
-    return joblib.load(file_path)
-
-
-############################################################# INICIO
-st.title("The Simpsons Show: Data Explorer")
-
-
-############################################################# CARGA DOS DADOS BRUTOS
-dbfile = os.environ.get('DBFILE')
-if not dbfile:
-    st.error("DBFILE environment variable is not set.")
-if st.session_state.get('data',None) is None:
-    try:
-        data = load_data(dbfile)
-        st.session_state['data'] = data
-    except Exception as e:
-        st.error(f"Error loading data: {e}")
-data = st.session_state['data']
-
-
-############################################################# CARGA DOS SUMARIOS
-# Load season and episode summaries
-episode_summary_file = os.environ.get("EPISODE_SUMMARY_FILE")
-st.session_state['episode_summary'] = load_joblib(episode_summary_file)
-
-character_summary_file = os.environ.get("CHARACTER_SUMMARY_FILE")
-st.session_state['character_summary'] = load_joblib(character_summary_file)
-
-season_summary_file = os.environ.get("SEASON_SUMMARY_FILE")
-st.session_state['season_summary'] = load_joblib(season_summary_file)
-
-############################################################# BASE DE DADOS VETORIAIS
-st.session_state['FAISS_DB'] = {
-    103: '../data/faiss/kdb_episode_id_103.faiss',
-    60: '../data/faiss/kdb_episode_id_60.faiss',
-    70: '../data/faiss/kdb_episode_id_70.faiss',
-    81: '../data/faiss/kdb_episode_id_81.faiss',
-    92: '../data/faiss/kdb_episode_id_92.faiss',
-    93: '../data/faiss/kdb_episode_id_93.faiss',
-}
-
-############################################################# SIDE BAR
-
-st.sidebar.title("About The Simpsons Show")
-st.sidebar.write("Explore the episodes, characters, and seasons of The Simpsons.")
-st.sidebar.metric("Total Seasons", data['episode_season'].nunique())
-st.sidebar.metric("Total Episodes", data['episode_id'].nunique())
-st.sidebar.metric("Total Characters", data['character_id'].nunique())
-############################################################# ABAS
-
-(overview_tab,
- season_tab,
- character_tab,
- ads_tab,
- qa_tab) = st.tabs(("Overview", "Seasons", "Characters", "Ads", "Episode Q&A"))
-
-# tabs.tab_overview(overview_tab)
-
-# tabs.tab_season(season_tab)
-
-# tabs.tab_character(character_tab)
-
-# tabs.tab_ads(ads_tab)
-
-tabs.tab_qa(qa_tab)
-
+with tab3:
+    st.title("Proposições")
+    
+    # Carregar e exibir tabela de proposições
+    df_proposicoes = pd.read_parquet("../data/proposicoes_deputados.parquet")
+    st.dataframe(df_proposicoes)
+    
+    # Carregar e exibir resumo das proposições
+    with open("../data/sumarizacao_proposicoes.json", "r", encoding="utf-8") as file:
+        sumarizacao = json.load(file)
+    
+    st.subheader("Tema")
+    st.write(sumarizacao["theme"])
+    
+    st.subheader("Resumo")
+    st.write(sumarizacao["summary"])

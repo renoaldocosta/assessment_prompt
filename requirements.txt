@@ -1,16 +1,18 @@
 jupyterlab
 ipywidgets
+streamlit
 pandas==2.2.3
 numpy==1.26.4
-scipy==1.14.1
+scipy>=1.7.0,<1.14.0
 scikit-learn==1.5.2
 torch==2.4.1
 transformers==4.45.1
 google-generativeai
-langchain_community-0.3.3
+langchain_community==0.3.3
 langchain==0.3.4
-word2vec==0.11.1
+# word2vec==0.11.1
 openai==1.52.2
+httpx==0.27.2
 gensim==4.3.3
 matplotlib==3.9.2
 unidecode
@@ -22,3 +24,8 @@ tiktoken
 fastparquet
 langchain_experimental
 pandarallel
+faiss-cpu
+sentence-transformers
+statsmodels
+kaleido
+seaborn

@@ -1,0 +1,107 @@
+[
+    {
+        "party": "PL",
+        "total_deputies": 93,
+        "percentage": 17.91907514450867
+    },
+    {
+        "party": "PT",
+        "total_deputies": 68,
+        "percentage": 13.102119460500964
+    },
+    {
+        "party": "UNI\u00c3O",
+        "total_deputies": 60,
+        "percentage": 11.560693641618498
+    },
+    {
+        "party": "PP",
+        "total_deputies": 52,
+        "percentage": 10.01926782273603
+    },
+    {
+        "party": "PSD",
+        "total_deputies": 45,
+        "percentage": 8.670520231213873
+    },
+    {
+        "party": "REPUBLICANOS",
+        "total_deputies": 44,
+        "percentage": 8.477842003853564
+    },
+    {
+        "party": "MDB",
+        "total_deputies": 44,
+        "percentage": 8.477842003853564
+    },
+    {
+        "party": "PDT",
+        "total_deputies": 19,
+        "percentage": 3.6608863198458574
+    },
+    {
+        "party": "PODE",
+        "total_deputies": 15,
+        "percentage": 2.8901734104046244
+    },
+    {
+        "party": "PSB",
+        "total_deputies": 14,
+        "percentage": 2.697495183044316
+    },
+    {
+        "party": "PSOL",
+        "total_deputies": 13,
+        "percentage": 2.5048169556840074
+    },
+    {
+        "party": "PSDB",
+        "total_deputies": 12,
+        "percentage": 2.312138728323699
+    },
+    {
+        "party": "PCdoB",
+        "total_deputies": 7,
+        "percentage": 1.348747591522158
+    },
+    {
+        "party": "AVANTE",
+        "total_deputies": 7,
+        "percentage": 1.348747591522158
+    },
+    {
+        "party": "SOLIDARIEDADE",
+        "total_deputies": 5,
+        "percentage": 0.9633911368015413
+    },
+    {
+        "party": "PV",
+        "total_deputies": 5,
+        "percentage": 0.9633911368015413
+    },
+    {
+        "party": "CIDADANIA",
+        "total_deputies": 5,
+        "percentage": 0.9633911368015413
+    },
+    {
+        "party": "PRD",
+        "total_deputies": 5,
+        "percentage": 0.9633911368015413
+    },
+    {
+        "party": "NOVO",
+        "total_deputies": 4,
+        "percentage": 0.7707129094412332
+    },
+    {
+        "party": "S.PART.",
+        "total_deputies": 1,
+        "percentage": 0.1926782273603083
+    },
+    {
+        "party": "REDE",
+        "total_deputies": 1,
+        "percentage": 0.1926782273603083
+    }
+]

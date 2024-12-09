@@ -1,0 +1,7 @@
+venv/
+.env
+.mypy_cache/
+.notebook/
+data/bertimbau/
+data2/
+src2/

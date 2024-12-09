@@ -1,0 +1,10 @@
+[
+    {
+        "Name": "Temporal Trend Analysis of Expenses",
+        "Findings": {
+            "overall_trend": "Expenses show an increasing trend (describe the trend observed from the plot)",
+            "seasonality": "There's a weekly seasonality (describe the seasonality observed)",
+            "other_observations": "Any other significant patterns observed from the plot and decomposition"
+        }
+    }
+]
