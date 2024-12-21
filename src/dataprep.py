@@ -571,6 +571,57 @@ def summarizer_chunk(df_proposicoes):
 ## O prompt do sistema para o assistente virtual deve ser feito com a técnica Self-Ask:
 ##
 ##
+def agrupar_informacoes(path_saida_parquet):
+    try:
+        
+        ############# Informações sobre os deputados #############
+        with open('../data/insights_distribuicao_deputados.json','r') as f:
+            insights = json.load(f)
+        df_insights = pd.DataFrame(insights['insights'])
+        df_insights['information'] = (df_insights['topic'] + ': ' + df_insights['analysis'])
+        df_insights
+
+
+        ############# Informações sobre as Despesas #############
+
+        # Carregar os dados dos deputados
+        df_despesas = pd.read_parquet('../data/serie_despesas_diárias_deputados.parquet')
+        df_despesas_agrupado_maior_gastador = df_despesas.groupby(['id', 'nome']).agg({'valorDocumento': 'sum'}).sort_values('valorDocumento', ascending=False).reset_index()
+        df_despesas_agrupado_maior_gastador['information'] = ('O deputado ' + df_despesas_agrupado_maior_gastador['nome'] + ', identificado pelo id ' + df_despesas_agrupado_maior_gastador['id'].astype(str) + ', Gastou um total de ' + df_despesas_agrupado_maior_gastador['valorDocumento'].astype(str) + ' reais')
+        df_despesas_agrupado_maior_gastador
+
+        ############# Informações sobre Gastos diários dos Deputados #############
+
+        # Sobre o tipo de despesa mais declarado
+        df_despesas = pd.read_parquet('../data/serie_despesas_diárias_deputados.parquet')
+        df_despesas_agrupado_tipo_mais_declarado = df_despesas.groupby('tipo_despesa').agg({'valorDocumento': 'sum'}).sort_values('valorDocumento', ascending=False).reset_index()
+        df_despesas_agrupado_tipo_mais_declarado = df_despesas_agrupado_tipo_mais_declarado.head(5)
+        df_despesas_agrupado_tipo_mais_declarado['information'] = ('O tipo de despesa ' + df_despesas_agrupado_tipo_mais_declarado['tipo_despesa'] + ' foi declarado, com um total de ' + df_despesas_agrupado_tipo_mais_declarado['valorDocumento'].astype(str) + ' reais')
+        df_despesas_agrupado_tipo_mais_declarado
+
+        ############# Informações sobre as Proposições #############
+        # Sobre o resumo das proposições
+        with open('../data/sumarizacao_proposicoes.json','r') as f:
+            propsition_summary = json.load(f)
+        df_proposition_summary = pd.DataFrame([propsition_summary['summary']])
+        df_proposition_summary['information'] = ('the summary of the propositions is: ' + df_proposition_summary[0])
+        df_proposition_summary
+
+
+        ############# Agrupa as Informações #############
+        # Ensure all DataFrames have the 'information' column
+        if 'information' in df_insights.columns and 'information' in df_despesas_agrupado_maior_gastador.columns and 'information' in df_despesas_agrupado_tipo_mais_declarado.columns and 'information' in df_proposition_summary.columns:
+            df_informations = pd.concat([df_insights[['information']], df_despesas_agrupado_maior_gastador[['information']], df_despesas_agrupado_tipo_mais_declarado[['information']], df_proposition_summary[['information']]], ignore_index=True)
+            df_informations.to_parquet(path_saida_parquet)
+            return df_informations
+            # print(df_informations)
+        else:
+            print("One or more DataFrames do not have the 'information' column.")
+            return
+    except Exception as e:
+        print(f"Erro ao agrupar informações: {e}")
+        return None
+
 
 @st.cache_data() #allow_output_mutation=True
 def load_and_process_data(parquet_path, model_name, llm_model_dir):
@@ -747,7 +798,8 @@ def return_questions_from_one_question(question, texts, index, embedding_model, 
     
     """
     genai.configure(api_key=os.environ["GEMINI_KEY"])
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    # model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-1.5-pro")
     print('Gerando a resposta final')
     response = model.generate_content(prompt)
     print('Traduzindo a resposta final')
