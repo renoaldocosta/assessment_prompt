@@ -42,8 +42,8 @@ Este projeto consiste em um dashboard interativo desenvolvido em Python utilizan
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/renoaldocosta/assessment_prompt.git
+cd assessment_prompt
 ```
 
 ### 2. Criar um Ambiente Virtual
